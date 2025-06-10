@@ -42,13 +42,17 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAtendidos)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAgregarPedido
             // 
-            this.btnAgregarPedido.Location = new System.Drawing.Point(302, 119);
+            this.btnAgregarPedido.Location = new System.Drawing.Point(232, 136);
             this.btnAgregarPedido.Name = "btnAgregarPedido";
             this.btnAgregarPedido.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarPedido.TabIndex = 0;
@@ -58,7 +62,7 @@
             // 
             // btnExportarTxt
             // 
-            this.btnExportarTxt.Location = new System.Drawing.Point(383, 119);
+            this.btnExportarTxt.Location = new System.Drawing.Point(587, 440);
             this.btnExportarTxt.Name = "btnExportarTxt";
             this.btnExportarTxt.Size = new System.Drawing.Size(75, 23);
             this.btnExportarTxt.TabIndex = 1;
@@ -68,7 +72,7 @@
             // 
             // btnProcesarSiguiente
             // 
-            this.btnProcesarSiguiente.Location = new System.Drawing.Point(475, 119);
+            this.btnProcesarSiguiente.Location = new System.Drawing.Point(492, 168);
             this.btnProcesarSiguiente.Name = "btnProcesarSiguiente";
             this.btnProcesarSiguiente.Size = new System.Drawing.Size(75, 23);
             this.btnProcesarSiguiente.TabIndex = 2;
@@ -78,7 +82,7 @@
             // 
             // btnBuscarAtendidos
             // 
-            this.btnBuscarAtendidos.Location = new System.Drawing.Point(306, 447);
+            this.btnBuscarAtendidos.Location = new System.Drawing.Point(180, 327);
             this.btnBuscarAtendidos.Name = "btnBuscarAtendidos";
             this.btnBuscarAtendidos.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarAtendidos.TabIndex = 3;
@@ -88,7 +92,7 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(387, 446);
+            this.btnFiltrar.Location = new System.Drawing.Point(206, 378);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
             this.btnFiltrar.TabIndex = 4;
@@ -98,30 +102,30 @@
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(233, 94);
+            this.txtCliente.Location = new System.Drawing.Point(23, 45);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtCliente.Size = new System.Drawing.Size(164, 20);
             this.txtCliente.TabIndex = 5;
             // 
             // txtDetalle
             // 
-            this.txtDetalle.Location = new System.Drawing.Point(392, 93);
+            this.txtDetalle.Location = new System.Drawing.Point(23, 91);
             this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(100, 20);
+            this.txtDetalle.Size = new System.Drawing.Size(164, 20);
             this.txtDetalle.TabIndex = 6;
             // 
             // dgvCola
             // 
             this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCola.Location = new System.Drawing.Point(16, 248);
+            this.dgvCola.Location = new System.Drawing.Point(387, 12);
             this.dgvCola.Name = "dgvCola";
-            this.dgvCola.Size = new System.Drawing.Size(249, 150);
+            this.dgvCola.Size = new System.Drawing.Size(275, 150);
             this.dgvCola.TabIndex = 7;
             // 
             // lblPendientes
             // 
             this.lblPendientes.AutoSize = true;
-            this.lblPendientes.Location = new System.Drawing.Point(245, 210);
+            this.lblPendientes.Location = new System.Drawing.Point(246, 246);
             this.lblPendientes.Name = "lblPendientes";
             this.lblPendientes.Size = new System.Drawing.Size(35, 13);
             this.lblPendientes.TabIndex = 8;
@@ -130,7 +134,7 @@
             // lblAtendidos
             // 
             this.lblAtendidos.AutoSize = true;
-            this.lblAtendidos.Location = new System.Drawing.Point(308, 210);
+            this.lblAtendidos.Location = new System.Drawing.Point(309, 246);
             this.lblAtendidos.Name = "lblAtendidos";
             this.lblAtendidos.Size = new System.Drawing.Size(35, 13);
             this.lblAtendidos.TabIndex = 9;
@@ -139,55 +143,89 @@
             // dgvAtendidos
             // 
             this.dgvAtendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAtendidos.Location = new System.Drawing.Point(324, 248);
+            this.dgvAtendidos.Location = new System.Drawing.Point(387, 284);
             this.dgvAtendidos.Name = "dgvAtendidos";
-            this.dgvAtendidos.Size = new System.Drawing.Size(253, 150);
+            this.dgvAtendidos.Size = new System.Drawing.Size(275, 150);
             this.dgvAtendidos.TabIndex = 10;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(180, 449);
+            this.txtBuscar.Location = new System.Drawing.Point(82, 381);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(100, 20);
             this.txtBuscar.TabIndex = 11;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(12, 27);
+            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpDesde.Location = new System.Drawing.Point(52, 213);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(200, 20);
+            this.dtpDesde.Size = new System.Drawing.Size(94, 20);
             this.dtpDesde.TabIndex = 12;
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(242, 27);
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHasta.Location = new System.Drawing.Point(163, 213);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(200, 20);
+            this.dtpHasta.Size = new System.Drawing.Size(88, 20);
             this.dtpHasta.TabIndex = 13;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtCliente);
+            this.groupBox1.Controls.Add(this.txtDetalle);
+            this.groupBox1.Controls.Add(this.btnAgregarPedido);
+            this.groupBox1.Location = new System.Drawing.Point(16, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(327, 165);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nuevo pedido";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Nombre del cliente";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Detalle pedido";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 508);
+            this.ClientSize = new System.Drawing.Size(677, 508);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvAtendidos);
+            this.Controls.Add(this.dgvCola);
             this.Controls.Add(this.lblAtendidos);
             this.Controls.Add(this.lblPendientes);
-            this.Controls.Add(this.dgvCola);
-            this.Controls.Add(this.txtDetalle);
-            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.btnBuscarAtendidos);
             this.Controls.Add(this.btnProcesarSiguiente);
             this.Controls.Add(this.btnExportarTxt);
-            this.Controls.Add(this.btnAgregarPedido);
             this.Name = "frmPrincipal";
             this.Text = "Inicio";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAtendidos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,6 +247,9 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.DateTimePicker dtpHasta;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
