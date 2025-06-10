@@ -1,0 +1,214 @@
+﻿namespace CafeteriaGestorPedidos
+{
+    partial class frmPrincipal
+    {
+        /// <summary>
+        /// Variable del diseñador necesaria.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Limpiar los recursos que se estén usando.
+        /// </summary>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Código generado por el Diseñador de Windows Forms
+
+        /// <summary>
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnAgregarPedido = new System.Windows.Forms.Button();
+            this.btnExportarTxt = new System.Windows.Forms.Button();
+            this.btnProcesarSiguiente = new System.Windows.Forms.Button();
+            this.btnBuscarAtendidos = new System.Windows.Forms.Button();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.txtDetalle = new System.Windows.Forms.TextBox();
+            this.dgvCola = new System.Windows.Forms.DataGridView();
+            this.lblPendientes = new System.Windows.Forms.Label();
+            this.lblAtendidos = new System.Windows.Forms.Label();
+            this.dgvAtendidos = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
+            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAtendidos)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnAgregarPedido
+            // 
+            this.btnAgregarPedido.Location = new System.Drawing.Point(302, 119);
+            this.btnAgregarPedido.Name = "btnAgregarPedido";
+            this.btnAgregarPedido.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarPedido.TabIndex = 0;
+            this.btnAgregarPedido.Text = "Agregar";
+            this.btnAgregarPedido.UseVisualStyleBackColor = true;
+            this.btnAgregarPedido.Click += new System.EventHandler(this.btnAgregarPedido_Click);
+            // 
+            // btnExportarTxt
+            // 
+            this.btnExportarTxt.Location = new System.Drawing.Point(383, 119);
+            this.btnExportarTxt.Name = "btnExportarTxt";
+            this.btnExportarTxt.Size = new System.Drawing.Size(75, 23);
+            this.btnExportarTxt.TabIndex = 1;
+            this.btnExportarTxt.Text = "Exportar";
+            this.btnExportarTxt.UseVisualStyleBackColor = true;
+            this.btnExportarTxt.Click += new System.EventHandler(this.btnExportarTxt_Click);
+            // 
+            // btnProcesarSiguiente
+            // 
+            this.btnProcesarSiguiente.Location = new System.Drawing.Point(475, 119);
+            this.btnProcesarSiguiente.Name = "btnProcesarSiguiente";
+            this.btnProcesarSiguiente.Size = new System.Drawing.Size(75, 23);
+            this.btnProcesarSiguiente.TabIndex = 2;
+            this.btnProcesarSiguiente.Text = "Siguiente";
+            this.btnProcesarSiguiente.UseVisualStyleBackColor = true;
+            this.btnProcesarSiguiente.Click += new System.EventHandler(this.btnProcesarSiguiente_Click);
+            // 
+            // btnBuscarAtendidos
+            // 
+            this.btnBuscarAtendidos.Location = new System.Drawing.Point(306, 447);
+            this.btnBuscarAtendidos.Name = "btnBuscarAtendidos";
+            this.btnBuscarAtendidos.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarAtendidos.TabIndex = 3;
+            this.btnBuscarAtendidos.Text = "Buscar";
+            this.btnBuscarAtendidos.UseVisualStyleBackColor = true;
+            this.btnBuscarAtendidos.Click += new System.EventHandler(this.btnBuscarAtendidos_Click);
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(387, 446);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 4;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // txtCliente
+            // 
+            this.txtCliente.Location = new System.Drawing.Point(233, 94);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtCliente.TabIndex = 5;
+            // 
+            // txtDetalle
+            // 
+            this.txtDetalle.Location = new System.Drawing.Point(392, 93);
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.Size = new System.Drawing.Size(100, 20);
+            this.txtDetalle.TabIndex = 6;
+            // 
+            // dgvCola
+            // 
+            this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCola.Location = new System.Drawing.Point(16, 248);
+            this.dgvCola.Name = "dgvCola";
+            this.dgvCola.Size = new System.Drawing.Size(249, 150);
+            this.dgvCola.TabIndex = 7;
+            // 
+            // lblPendientes
+            // 
+            this.lblPendientes.AutoSize = true;
+            this.lblPendientes.Location = new System.Drawing.Point(245, 210);
+            this.lblPendientes.Name = "lblPendientes";
+            this.lblPendientes.Size = new System.Drawing.Size(35, 13);
+            this.lblPendientes.TabIndex = 8;
+            this.lblPendientes.Text = "label1";
+            // 
+            // lblAtendidos
+            // 
+            this.lblAtendidos.AutoSize = true;
+            this.lblAtendidos.Location = new System.Drawing.Point(308, 210);
+            this.lblAtendidos.Name = "lblAtendidos";
+            this.lblAtendidos.Size = new System.Drawing.Size(35, 13);
+            this.lblAtendidos.TabIndex = 9;
+            this.lblAtendidos.Text = "label1";
+            // 
+            // dgvAtendidos
+            // 
+            this.dgvAtendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAtendidos.Location = new System.Drawing.Point(324, 248);
+            this.dgvAtendidos.Name = "dgvAtendidos";
+            this.dgvAtendidos.Size = new System.Drawing.Size(253, 150);
+            this.dgvAtendidos.TabIndex = 10;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(180, 449);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.TabIndex = 11;
+            // 
+            // dtpDesde
+            // 
+            this.dtpDesde.Location = new System.Drawing.Point(12, 27);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.Size = new System.Drawing.Size(200, 20);
+            this.dtpDesde.TabIndex = 12;
+            // 
+            // dtpHasta
+            // 
+            this.dtpHasta.Location = new System.Drawing.Point(242, 27);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.Size = new System.Drawing.Size(200, 20);
+            this.dtpHasta.TabIndex = 13;
+            // 
+            // frmPrincipal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(589, 508);
+            this.Controls.Add(this.dtpHasta);
+            this.Controls.Add(this.dtpDesde);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.dgvAtendidos);
+            this.Controls.Add(this.lblAtendidos);
+            this.Controls.Add(this.lblPendientes);
+            this.Controls.Add(this.dgvCola);
+            this.Controls.Add(this.txtDetalle);
+            this.Controls.Add(this.txtCliente);
+            this.Controls.Add(this.btnFiltrar);
+            this.Controls.Add(this.btnBuscarAtendidos);
+            this.Controls.Add(this.btnProcesarSiguiente);
+            this.Controls.Add(this.btnExportarTxt);
+            this.Controls.Add(this.btnAgregarPedido);
+            this.Name = "frmPrincipal";
+            this.Text = "Inicio";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAtendidos)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnAgregarPedido;
+        private System.Windows.Forms.Button btnExportarTxt;
+        private System.Windows.Forms.Button btnProcesarSiguiente;
+        private System.Windows.Forms.Button btnBuscarAtendidos;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.TextBox txtCliente;
+        private System.Windows.Forms.TextBox txtDetalle;
+        private System.Windows.Forms.DataGridView dgvCola;
+        private System.Windows.Forms.Label lblPendientes;
+        private System.Windows.Forms.Label lblAtendidos;
+        private System.Windows.Forms.DataGridView dgvAtendidos;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
+    }
+}
+
