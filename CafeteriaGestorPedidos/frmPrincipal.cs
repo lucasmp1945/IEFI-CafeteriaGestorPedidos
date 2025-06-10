@@ -32,6 +32,15 @@ namespace CafeteriaGestorPedidos
             cola.Encolar(nuevo);
             MostrarCola();
             ActualizarContadores();
+            LimpiarCampos();
+        }
+
+        private void LimpiarCampos()
+        {
+            txtCliente.Text = "";
+            txtDetalle.Text = "";
+
+ 
         }
 
 

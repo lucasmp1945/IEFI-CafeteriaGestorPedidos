@@ -52,9 +52,10 @@
             // 
             // btnAgregarPedido
             // 
-            this.btnAgregarPedido.Location = new System.Drawing.Point(232, 136);
+            this.btnAgregarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarPedido.Location = new System.Drawing.Point(54, 149);
             this.btnAgregarPedido.Name = "btnAgregarPedido";
-            this.btnAgregarPedido.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarPedido.Size = new System.Drawing.Size(85, 29);
             this.btnAgregarPedido.TabIndex = 0;
             this.btnAgregarPedido.Text = "Agregar";
             this.btnAgregarPedido.UseVisualStyleBackColor = true;
@@ -72,7 +73,7 @@
             // 
             // btnProcesarSiguiente
             // 
-            this.btnProcesarSiguiente.Location = new System.Drawing.Point(492, 168);
+            this.btnProcesarSiguiente.Location = new System.Drawing.Point(358, 182);
             this.btnProcesarSiguiente.Name = "btnProcesarSiguiente";
             this.btnProcesarSiguiente.Size = new System.Drawing.Size(75, 23);
             this.btnProcesarSiguiente.TabIndex = 2;
@@ -82,7 +83,7 @@
             // 
             // btnBuscarAtendidos
             // 
-            this.btnBuscarAtendidos.Location = new System.Drawing.Point(180, 327);
+            this.btnBuscarAtendidos.Location = new System.Drawing.Point(205, 317);
             this.btnBuscarAtendidos.Name = "btnBuscarAtendidos";
             this.btnBuscarAtendidos.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarAtendidos.TabIndex = 3;
@@ -92,7 +93,7 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(206, 378);
+            this.btnFiltrar.Location = new System.Drawing.Point(229, 391);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
             this.btnFiltrar.TabIndex = 4;
@@ -102,22 +103,24 @@
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(23, 45);
+            this.txtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliente.Location = new System.Drawing.Point(21, 48);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(164, 20);
+            this.txtCliente.Size = new System.Drawing.Size(168, 22);
             this.txtCliente.TabIndex = 5;
             // 
             // txtDetalle
             // 
-            this.txtDetalle.Location = new System.Drawing.Point(23, 91);
+            this.txtDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDetalle.Location = new System.Drawing.Point(21, 104);
             this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(164, 20);
+            this.txtDetalle.Size = new System.Drawing.Size(164, 22);
             this.txtDetalle.TabIndex = 6;
             // 
             // dgvCola
             // 
             this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCola.Location = new System.Drawing.Point(387, 12);
+            this.dgvCola.Location = new System.Drawing.Point(270, 12);
             this.dgvCola.Name = "dgvCola";
             this.dgvCola.Size = new System.Drawing.Size(275, 150);
             this.dgvCola.TabIndex = 7;
@@ -125,7 +128,7 @@
             // lblPendientes
             // 
             this.lblPendientes.AutoSize = true;
-            this.lblPendientes.Location = new System.Drawing.Point(246, 246);
+            this.lblPendientes.Location = new System.Drawing.Point(467, 268);
             this.lblPendientes.Name = "lblPendientes";
             this.lblPendientes.Size = new System.Drawing.Size(35, 13);
             this.lblPendientes.TabIndex = 8;
@@ -134,7 +137,7 @@
             // lblAtendidos
             // 
             this.lblAtendidos.AutoSize = true;
-            this.lblAtendidos.Location = new System.Drawing.Point(309, 246);
+            this.lblAtendidos.Location = new System.Drawing.Point(530, 268);
             this.lblAtendidos.Name = "lblAtendidos";
             this.lblAtendidos.Size = new System.Drawing.Size(35, 13);
             this.lblAtendidos.TabIndex = 9;
@@ -150,7 +153,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(82, 381);
+            this.txtBuscar.Location = new System.Drawing.Point(37, 320);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(100, 20);
             this.txtBuscar.TabIndex = 11;
@@ -158,7 +161,7 @@
             // dtpDesde
             // 
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpDesde.Location = new System.Drawing.Point(52, 213);
+            this.dtpDesde.Location = new System.Drawing.Point(17, 394);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(94, 20);
             this.dtpDesde.TabIndex = 12;
@@ -166,7 +169,7 @@
             // dtpHasta
             // 
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHasta.Location = new System.Drawing.Point(163, 213);
+            this.dtpHasta.Location = new System.Drawing.Point(117, 394);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(88, 20);
             this.dtpHasta.TabIndex = 13;
@@ -178,9 +181,9 @@
             this.groupBox1.Controls.Add(this.txtCliente);
             this.groupBox1.Controls.Add(this.txtDetalle);
             this.groupBox1.Controls.Add(this.btnAgregarPedido);
-            this.groupBox1.Location = new System.Drawing.Point(16, 26);
+            this.groupBox1.Location = new System.Drawing.Point(16, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(327, 165);
+            this.groupBox1.Size = new System.Drawing.Size(211, 193);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo pedido";
@@ -188,7 +191,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 29);
+            this.label1.Location = new System.Drawing.Point(21, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 6;
@@ -197,7 +200,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 75);
+            this.label2.Location = new System.Drawing.Point(21, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 7;
@@ -207,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 508);
+            this.ClientSize = new System.Drawing.Size(677, 479);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.dtpDesde);
