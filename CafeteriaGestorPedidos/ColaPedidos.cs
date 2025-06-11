@@ -11,7 +11,7 @@ namespace CafeteriaGestorPedidos
         private NodoCola frente;
         private NodoCola fondo;
 
-        public void Encolar(Pedido pedido)
+        public void Agregar(Pedido pedido)
         {
             NodoCola nuevo = new NodoCola(pedido);
             if (fondo == null)
@@ -25,7 +25,7 @@ namespace CafeteriaGestorPedidos
             }
         }
 
-        public Pedido Desencolar()
+        public Pedido Quitar()
         {
             if (frente == null) return null;
 
@@ -35,7 +35,7 @@ namespace CafeteriaGestorPedidos
             return pedido;
         }
 
-        public List<Pedido> ObtenerPedidos() // Renombrado de ObtenerTodos
+        public List<Pedido> ObtenerPedidos() 
         {
             List<Pedido> pedidos = new List<Pedido>();
             NodoCola actual = frente;

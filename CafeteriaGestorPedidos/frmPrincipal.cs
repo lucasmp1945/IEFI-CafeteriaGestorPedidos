@@ -19,6 +19,9 @@ namespace CafeteriaGestorPedidos
         public frmPrincipal()
         {
             InitializeComponent();
+            dtpDesde.Enabled = false;
+            dtpHasta.Enabled = false;
+            btnFiltrar.Enabled = false;
         }
 
         private void btnAgregarPedido_Click(object sender, EventArgs e)
@@ -29,7 +32,7 @@ namespace CafeteriaGestorPedidos
                 Detalle = txtDetalle.Text,
                 Hora = DateTime.Now
             };
-            cola.Encolar(nuevo);
+            cola.Agregar(nuevo);
             MostrarCola();
             ActualizarContadores();
             LimpiarCampos();
@@ -43,18 +46,35 @@ namespace CafeteriaGestorPedidos
  
         }
 
-
         private void MostrarCola()
         {
             dgvCola.DataSource = null;
             dgvCola.DataSource = cola.ObtenerPedidos();
+
+            if (dgvCola.Columns["Hora"] != null)
+            {
+                dgvCola.Columns["Hora"].DefaultCellStyle.Format = "HH:mm";
+            }
         }
+
 
         private void MostrarAtendidos()
         {
             dgvAtendidos.DataSource = null;
             dgvAtendidos.DataSource = listaAtendidos.ObtenerPedidos();
+
+            if (dgvAtendidos.Columns["Hora"] != null)
+            {
+                dgvAtendidos.Columns["Hora"].DefaultCellStyle.Format = "HH:mm";
+            }
+            ActualizarCantidadAtendidos();
         }
+
+        private void ActualizarCantidadAtendidos()
+        {
+            lblCantidad.Text = $"Cantidad: {dgvAtendidos.Rows.Count}";
+        }
+
 
         private void ActualizarContadores()
         {
@@ -64,7 +84,7 @@ namespace CafeteriaGestorPedidos
 
         private void btnProcesarSiguiente_Click(object sender, EventArgs e)
         {
-            Pedido siguiente = cola.Desencolar();
+            Pedido siguiente = cola.Quitar();
             if (siguiente != null)
             {
                 listaAtendidos.AgregarOrdenado(siguiente);
@@ -105,5 +125,24 @@ namespace CafeteriaGestorPedidos
             dgvAtendidos.DataSource = listaAtendidos.BuscarPorNombre(nombre);
         }
 
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string nombre = txtBuscar.Text;
+            dgvAtendidos.DataSource = listaAtendidos.BuscarPorNombre(nombre);
+        }
+
+        private void chkFiltrarHora_CheckedChanged(object sender, EventArgs e)
+        {
+            bool habilitar = chkFiltrarHora.Checked;
+
+            dtpDesde.Enabled = habilitar;
+            dtpHasta.Enabled = habilitar;
+            btnFiltrar.Enabled = habilitar;
+
+            if (!habilitar)
+            {
+                MostrarAtendidos();
+            }
+        }
     }
 }

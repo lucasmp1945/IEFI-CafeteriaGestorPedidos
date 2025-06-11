@@ -31,7 +31,7 @@ namespace CafeteriaGestorPedidos
             }
         }
 
-        public List<Pedido> ObtenerPedidos() // Renombrado de ObtenerTodos
+        public List<Pedido> ObtenerPedidos() 
         {
             List<Pedido> pedidos = new List<Pedido>();
             NodoLista actual = cabeza;
@@ -43,19 +43,33 @@ namespace CafeteriaGestorPedidos
             return pedidos;
         }
 
-        public List<Pedido> BuscarPorNombre(string nombre) // Renombrado de BuscarPorCliente
+        public List<Pedido> BuscarPorNombre(string nombre)
         {
-            return ObtenerPedidos()
-                .Where(p => p.Cliente.IndexOf(nombre, StringComparison.OrdinalIgnoreCase) >= 0)
-                .ToList();
+            List<Pedido> resultado = new List<Pedido>();
+            foreach (Pedido p in ObtenerPedidos())
+            {
+                if (p.Cliente.ToLower().Contains(nombre.ToLower()))
+                {
+                    resultado.Add(p);
+                }
+            }
+            return resultado;
         }
 
-        public List<Pedido> FiltrarPorHorario(DateTime desde, DateTime hasta) // Renombrado de FiltrarPorHora
+
+        public List<Pedido> FiltrarPorHorario(DateTime desde, DateTime hasta)
         {
-            return ObtenerPedidos()
-                .Where(p => p.Hora >= desde && p.Hora <= hasta)
-                .ToList();
+            List<Pedido> resultado = new List<Pedido>();
+            foreach (Pedido p in ObtenerPedidos())
+            {
+                if (p.Hora >= desde && p.Hora <= hasta)
+                {
+                    resultado.Add(p);
+                }
+            }
+            return resultado;
         }
+
 
         public int Contar()
         {
