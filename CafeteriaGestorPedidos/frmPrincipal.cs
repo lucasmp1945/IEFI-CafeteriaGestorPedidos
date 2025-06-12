@@ -15,6 +15,7 @@ namespace CafeteriaGestorPedidos
     {
         ColaPedidos cola = new ColaPedidos();
         ListaPedidosAtendidos listaAtendidos = new ListaPedidosAtendidos();
+        private string nombreClienteModificar = null;
 
         public frmPrincipal()
         {
@@ -143,6 +144,75 @@ namespace CafeteriaGestorPedidos
             {
                 MostrarAtendidos();
             }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            string nombreCliente = txtCliente.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombreCliente))
+            {
+                MessageBox.Show("Por favor, ingrese el nombre del cliente a modificar.");
+                return;
+            }
+
+            var pedido = cola.ObtenerPedidos()
+                             .FirstOrDefault(p => p.Cliente.Equals(nombreCliente, StringComparison.OrdinalIgnoreCase));
+
+            if (pedido != null)
+            {
+                txtDetalleNvo.Text = pedido.Detalle;
+                nombreClienteModificar = pedido.Cliente; 
+                MessageBox.Show("Pedido cargado para modificar. Ingrese el nuevo detalle y haga clic en Guardar.");
+            }
+            else
+            {
+                MessageBox.Show("Cliente no encontrado en la cola.");
+            }
+        }
+
+        private void dgvAtendidos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                var fila = dgvAtendidos.Rows[e.RowIndex];
+                var pedido = (Pedido)fila.DataBoundItem;
+
+                nombreClienteModificar = pedido.Cliente;
+                txtDetalleNvo.Text = pedido.Detalle.ToString();
+
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string nuevoDetalle = txtDetalleNvo.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombreClienteModificar) || string.IsNullOrEmpty(nuevoDetalle))
+            {
+                MessageBox.Show("Faltan datos. Seleccioná un pedido y escribí el nuevo detalle.");
+                return;
+            }
+
+            NodoLista actual = listaAtendidos.Primero();
+
+            while (actual != null)
+            {
+                if (actual.Pedido.Cliente.Equals(nombreClienteModificar, StringComparison.OrdinalIgnoreCase))
+                {
+                    actual.Pedido.Detalle = nuevoDetalle;
+                    MessageBox.Show("Detalle modificado correctamente.");
+                    MostrarAtendidos();
+                    txtDetalleNvo.Text = "";
+                    nombreClienteModificar = null;
+                    return;
+                }
+
+                actual = actual.Siguiente;
+            }
+
+            MessageBox.Show("No se encontró el pedido.");
         }
     }
 }

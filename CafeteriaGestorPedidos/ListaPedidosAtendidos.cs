@@ -75,5 +75,10 @@ namespace CafeteriaGestorPedidos
         {
             return ObtenerPedidos().Count;
         }
+
+        public NodoLista Primero()
+        {
+            return cabeza;
+        }
     }
 }
